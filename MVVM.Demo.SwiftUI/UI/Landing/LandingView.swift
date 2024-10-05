@@ -10,15 +10,15 @@ import SwiftUI
 struct LandingView: View {
   @ScaledMetric private var buttonPadding: CGFloat = 8.0
   @ScaledMetric private var inverseHorizontalPadding: CGFloat = 8.0
-  
+
   private let buttonMinHeight: CGFloat = 54.0
-  
+
   @Bindable var viewModel: LandingViewModel
-  
+
   @State private var isAuthenticated: Bool = false
   @State private var username: String = .empty
   @State private var pulseColor: Color = .accentColor
-  
+
   var body: some View {
     VStack(alignment: .center, spacing: 24.0) {
       signInOutButton()
@@ -38,7 +38,7 @@ struct LandingView: View {
       self.pulseColor = $0.asColor()
     }
   }
-  
+
   private func signInOutButton() -> some View {
     Button(action: self.viewModel.signInOrOut) {
       Text(self.isAuthenticated ? "Sign Out, \(self.username)" : "Sign In")
@@ -52,7 +52,7 @@ struct LandingView: View {
     .busyOverlay()
     .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
   }
-  
+
   private func pulseButton() -> some View {
     Button(action: self.viewModel.pulse) {
       Text("Pulse")
@@ -62,7 +62,7 @@ struct LandingView: View {
     }
     .buttonStyle(.brightBorderedButton(color: self.pulseColor))
   }
-  
+
   private func infiniteCardsButton() -> some View {
     Button(action: self.viewModel.infiniteCards) {
       Text("Infinite Cards")
@@ -74,7 +74,7 @@ struct LandingView: View {
     }
     .buttonStyle(.brightBorderedButton)
   }
-  
+
   private func colorWizardButton() -> some View {
     Button(action: self.viewModel.colorWizard) {
       Text("Color Wizard")
@@ -88,11 +88,12 @@ struct LandingView: View {
   }
 }
 
+
 #if DEBUG
 struct LandingView_Previews: PreviewProvider {
   static let appAssembler = AppAssembler()
   static let viewModel = appAssembler.resolver.resolved(LandingViewModel.self)
-  
+
   static var previews: some View {
     Group {
       LandingView(viewModel: viewModel)
