@@ -7,6 +7,7 @@
 
 import Combine
 import CombineExt
+import Foundation
 
 extension Publisher {
   /// Republishes elements received from a publisher, by assigning them to a property marked as a publisher, but does not hold a strong reference to the assigned property.

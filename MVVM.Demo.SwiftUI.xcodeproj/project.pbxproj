@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6FD86CD9293DE9060052C759 /* ObjectNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD86CD8293DE9060052C759 /* ObjectNavigationStack.swift */; };
-		6FD86CDC2940033C0052C759 /* BusyIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 6FD86CDB2940033C0052C759 /* BusyIndicator */; };
 		6FDA2F112BE0573700A83DDB /* InfiniteCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDA2F102BE0573700A83DDB /* InfiniteCardsView.swift */; };
 		6FDA2F132BE0575000A83DDB /* InfiniteCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDA2F122BE0575000A83DDB /* InfiniteCardsViewModel.swift */; };
 		6FF089B92BAC9387001C454E /* Resolver+Resolved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF089B82BAC9387001C454E /* Resolver+Resolved.swift */; };
+		8AD8A7362CB0BE1A00306628 /* BusyIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD8A7352CB0BE1A00306628 /* BusyIndicator */; };
+		8AD8A7382CB0BE1D00306628 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD8A7372CB0BE1D00306628 /* Swinject */; };
+		8AD8A73A2CB0BE2000306628 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD8A7392CB0BE2000306628 /* CombineExt */; };
 		9647788B2774F0EE002203DE /* AnyPublisher+AwaitResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9647788A2774F0EE002203DE /* AnyPublisher+AwaitResults.swift */; };
 		964778902774F240002203DE /* AuthenticationService+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9647788F2774F240002203DE /* AuthenticationService+Tests.swift */; };
 		964778922774F64A002203DE /* Result+TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964778912774F64A002203DE /* Result+TestExtensions.swift */; };
@@ -36,8 +38,6 @@
 		96B4E09827432E7D00EC88B3 /* Just+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E09727432E7D00EC88B3 /* Just+Void.swift */; };
 		96B4E09A27432E9300EC88B3 /* Publisher+DefinedScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E09927432E9300EC88B3 /* Publisher+DefinedScheduler.swift */; };
 		96B4E09C27432EB100EC88B3 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E09B27432EB100EC88B3 /* Publisher+Extensions.swift */; };
-		96B4E0A227432EEE00EC88B3 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 96B4E0A127432EEE00EC88B3 /* CombineExt */; };
-		96B4E0A527432EFC00EC88B3 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 96B4E0A427432EFC00EC88B3 /* Swinject */; };
 		96B4E0A727432F1C00EC88B3 /* PassthroughSubject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E0A627432F1C00EC88B3 /* PassthroughSubject+Extensions.swift */; };
 		96B4E0AC27432F8900EC88B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E0AB27432F8900EC88B3 /* String+Extensions.swift */; };
 		96B4E0AE27432FAB00EC88B3 /* UIApplication+EndEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E0AD27432FAB00EC88B3 /* UIApplication+EndEditing.swift */; };
@@ -157,9 +157,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96B4E0A227432EEE00EC88B3 /* CombineExt in Frameworks */,
-				96B4E0A527432EFC00EC88B3 /* Swinject in Frameworks */,
-				6FD86CDC2940033C0052C759 /* BusyIndicator in Frameworks */,
+				8AD8A7362CB0BE1A00306628 /* BusyIndicator in Frameworks */,
+				8AD8A73A2CB0BE2000306628 /* CombineExt in Frameworks */,
+				8AD8A7382CB0BE1D00306628 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +187,13 @@
 				6FDA2F122BE0575000A83DDB /* InfiniteCardsViewModel.swift */,
 			);
 			path = InfiniteCards;
+			sourceTree = "<group>";
+		};
+		8AD8A7342CB0BE1A00306628 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		964778892774F0C9002203DE /* TestExtensions */ = {
@@ -254,6 +261,7 @@
 				96B4E07427432D6300EC88B3 /* MVVM.Demo.SwiftUITests */,
 				96B4E07E27432D6300EC88B3 /* MVVM.Demo.SwiftUIUITests */,
 				96B4E06227432D6100EC88B3 /* Products */,
+				8AD8A7342CB0BE1A00306628 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -499,9 +507,9 @@
 			);
 			name = MVVM.Demo.SwiftUI;
 			packageProductDependencies = (
-				96B4E0A127432EEE00EC88B3 /* CombineExt */,
-				96B4E0A427432EFC00EC88B3 /* Swinject */,
-				6FD86CDB2940033C0052C759 /* BusyIndicator */,
+				8AD8A7352CB0BE1A00306628 /* BusyIndicator */,
+				8AD8A7372CB0BE1D00306628 /* Swinject */,
+				8AD8A7392CB0BE2000306628 /* CombineExt */,
 			);
 			productName = MVVM.Demo.SwiftUI;
 			productReference = 96B4E06127432D6100EC88B3 /* MVVM.Demo.SwiftUI.app */;
@@ -576,9 +584,9 @@
 			);
 			mainGroup = 96B4E05827432D6100EC88B3;
 			packageReferences = (
-				96B4E0A027432EEE00EC88B3 /* XCRemoteSwiftPackageReference "CombineExt" */,
-				96B4E0A327432EFC00EC88B3 /* XCRemoteSwiftPackageReference "Swinject" */,
-				6FD86CDA2940033C0052C759 /* XCRemoteSwiftPackageReference "BusyIndicator" */,
+				8AD8A7312CB0BD6600306628 /* XCRemoteSwiftPackageReference "BusyIndicator" */,
+				8AD8A7322CB0BDF300306628 /* XCRemoteSwiftPackageReference "Swinject" */,
+				8AD8A7332CB0BE0000306628 /* XCRemoteSwiftPackageReference "CombineExt" */,
 			);
 			productRefGroup = 96B4E06227432D6100EC88B3 /* Products */;
 			projectDirPath = "";
@@ -1027,47 +1035,47 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6FD86CDA2940033C0052C759 /* XCRemoteSwiftPackageReference "BusyIndicator" */ = {
+		8AD8A7312CB0BD6600306628 /* XCRemoteSwiftPackageReference "BusyIndicator" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:jasonjrr/BusyIndicator.git";
+			repositoryURL = "https://github.com/jasonjrr/BusyIndicator.git";
 			requirement = {
-				kind = exactVersion;
-				version = 1.1.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
 			};
 		};
-		96B4E0A027432EEE00EC88B3 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
-			requirement = {
-				kind = exactVersion;
-				version = 1.6.1;
-			};
-		};
-		96B4E0A327432EFC00EC88B3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		8AD8A7322CB0BDF300306628 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
-				kind = exactVersion;
-				version = 2.8.1;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		8AD8A7332CB0BE0000306628 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6FD86CDB2940033C0052C759 /* BusyIndicator */ = {
+		8AD8A7352CB0BE1A00306628 /* BusyIndicator */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6FD86CDA2940033C0052C759 /* XCRemoteSwiftPackageReference "BusyIndicator" */;
+			package = 8AD8A7312CB0BD6600306628 /* XCRemoteSwiftPackageReference "BusyIndicator" */;
 			productName = BusyIndicator;
 		};
-		96B4E0A127432EEE00EC88B3 /* CombineExt */ = {
+		8AD8A7372CB0BE1D00306628 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 96B4E0A027432EEE00EC88B3 /* XCRemoteSwiftPackageReference "CombineExt" */;
-			productName = CombineExt;
-		};
-		96B4E0A427432EFC00EC88B3 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96B4E0A327432EFC00EC88B3 /* XCRemoteSwiftPackageReference "Swinject" */;
+			package = 8AD8A7322CB0BDF300306628 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		8AD8A7392CB0BE2000306628 /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AD8A7332CB0BE0000306628 /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
