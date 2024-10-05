@@ -36,7 +36,18 @@ class LandingViewModel: ViewModel {
   let colorWizard: PassthroughSubject<Void, Never> = PassthroughSubject()
 
   private var cancelBag: CancelBag!
-  
+  private(set) var currentColor: Color = .clear
+  private var colorCancellable: AnyCancellable?
+
+  private func startColorPreview() {
+    self.colorCancellable = self.colorService.generateColors()
+      .map { $0.asColor() }
+      // Run the color generation on DispatchQueue.main so that changes occur even during user input.
+      .receive(on: DispatchQueue.main)
+      // Set the current color to the generated color.
+      .assign(to: \.currentColor, on: self)
+  }
+
   init(alertService: AlertServiceProtocol, authenticationService: AuthenticationServiceProtocol, colorService: ColorServiceProtocol) {
     self.alertService = alertService
     self.authenticationService = authenticationService
@@ -48,6 +59,7 @@ class LandingViewModel: ViewModel {
   func setup(delegate: LandingViewModelDelegate) -> Self {
     self.delegate = delegate
     bind()
+    startColorPreview()
     return self
   }
 

@@ -25,6 +25,7 @@ struct LandingView: View {
       pulseButton()
       infiniteCardsButton()
       colorWizardButton()
+      colorPreviewRect()
     }
     .padding([.leading, .trailing], max(56.0 - self.inverseHorizontalPadding, 4.0))
     .navigationBarHidden(true)
@@ -85,6 +86,16 @@ struct LandingView: View {
         .contentShape(Rectangle())
     }
     .buttonStyle(.brightBorderedButton)
+  }
+
+  private func colorPreviewRect() -> some View {
+    Text("Color Cycle")
+      .textStyle(.button)
+      .minimumScaleFactor(0.75)
+      .frame(maxWidth: .infinity, minHeight: self.buttonMinHeight)
+      .background(self.viewModel.currentColor)
+      .foregroundColor(.accentColor)
+      .clipShape(RoundedRectangle(cornerRadius: 16))
   }
 }
 
